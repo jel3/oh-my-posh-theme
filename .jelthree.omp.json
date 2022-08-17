@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "rprompt",
+      "segments": [
+        {
+          "foreground": "#ffee00",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": false
+          },
+          "style": "plain",
+          "template": "{{ .HEAD }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#00e1ff",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#00e1ff",
+          "style": "plain",
+          "template": "<#00e1ff>\u2ba9</>",
+          "type": "text"
+        },
+        {
+          "foreground": "#00e1ff",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#DCB977",
+          "style": "plain",
+          "template": " \uf119",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
