@@ -31,7 +31,7 @@
           "foreground_templates": [
             "{{ if gt .Code 0 }}p:red{{ end }}"
           ],
-          "template": "\u26e7 ",
+          "template": "{{ if gt .Code 0 }}\u26e7{{ else }}🌮{{ end }} ",
           "properties": {
             "always_enabled": true
           }
